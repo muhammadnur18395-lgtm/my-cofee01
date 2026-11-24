@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f1e8;
+    color: #39271c;
+}
+
+header {
+    background: #39271c;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    color: #e4b77d;
+}
+
+main {
+    min-height: 80vh;
+    padding: 30px 7%;
+}
+
+.auth {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.auth h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.auth-box {
+    background: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0001;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+button {
+    background: #9b6337;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #704323;
+}
+
+.auth-box form > button {
+    width: 100%;
+}
+
+.welcome {
+    background: #513421;
+    color: white;
+    padding: 45px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 18px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0001;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 13px;
+}
+
+.card p {
+    margin: 10px;
+    color: #a16a3e;
+    font-weight: bold;
+}
+
+.card button {
+    margin-top: 8px;
+}
+
+.panel, .cart, .profile {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 25px 0;
+}
+
+.panel h2, .panel h3 {
+    margin-bottom: 15px;
+}
+
+.cart-item, .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart h3 {
+    margin: 20px 0;
+}
+
+.profile p {
+    margin: 15px 0;
+}
+
+footer {
+    background: #39271c;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media(max-width:600px) {
+    main {
+        padding: 20px 5%;
+    }
+
+    .auth h1 {
+        font-size: 27px;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+}

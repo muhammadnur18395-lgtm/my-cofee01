@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY COFEE - Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>☕ MY COFEE</h2>
+    <div id="navUser"></div>
+</header>
+
+<main>
+    <section id="auth" class="auth">
+        <h1>Welcome to MY COFEE</h1>
+        <p>Silakan login atau buat akun baru.</p>
+
+        <div class="auth-box">
+            <div class="tabs">
+                <button onclick="showAuth('login')">Login</button>
+                <button onclick="showAuth('register')">Register</button>
+            </div>
+
+            <form id="loginForm">
+                <h2>Login</h2>
+                <input id="loginUsername" placeholder="Username" required>
+                <input id="loginPassword" type="password"
+                    placeholder="Password" required>
+                <button type="submit">Masuk</button>
+            </form>
+
+            <form id="registerForm" hidden>
+                <h2>Buat Akun</h2>
+                <input id="regUsername" placeholder="Buat username" required>
+                <input id="regPassword" type="password"
+                    placeholder="Buat password" required minlength="6">
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="dashboard" hidden>
+        <div class="welcome">
+            <h1>Selamat Datang di MY COFEE ☕</h1>
+            <p>Nikmati kopi favoritmu setiap hari.</p>
+        </div>
+
+        <div id="adminPanel" hidden class="panel">
+            <h2>Dashboard Admin</h2>
+            <form id="productForm">
+                <input id="productName" placeholder="Nama produk" required>
+                <input id="productPrice" type="number"
+                    placeholder="Harga produk" min="1" required>
+                <input id="productImage" type="url"
+                    placeholder="Link gambar produk">
+                <button type="submit">Tambah Produk</button>
+            </form>
+            <h3>Daftar Pesanan</h3>
+            <div id="adminOrders"></div>
+        </div>
+
+        <h2 class="section-title">Menu Kopi Kami</h2>
+        <div id="products" class="products"></div>
+
+        <section class="cart">
+            <h2>🛒 Keranjang Belanja</h2>
+            <div id="cartItems">Keranjang masih kosong.</div>
+            <h3 id="cartTotal">Total: Rp0</h3>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+
+        <section class="profile">
+            <h2>Profil Pengguna</h2>
+            <p id="profileInfo"></p>
+            <button onclick="logout()">Logout</button>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 MY COFEE | Coffee Shop</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
